@@ -1,5 +1,7 @@
 # circle-progress
 
+[Demo](http://marinewater.github.io/circle-progress/)
+
 ## Requirement
 * jQuery
 * jquery.transform2d.js
