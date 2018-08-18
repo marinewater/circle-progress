@@ -10,8 +10,8 @@
 ### JS and CSS only
 
 Include stylesheet
-```$html
-<link rel="stylesheet" href="dist/progress.css">
+```html
+<link rel="stylesheet" type="text/css" href="dist/progress.css">
 ```
 
 Include javascript
@@ -47,12 +47,26 @@ p.progress( 20 );
 or animate progress change over time
 ```javascript
 // changes from current progress to 60% over 500ms
-p.progress_animate( 60, 500 )
+p.progress_animate( 60, 500 );
 ```
 
 
 ### Scss
-todo
+just import the scss file
+```scss
+@import "progress";
+```
 
 ### Typescript
-todo
+```typescript
+// import circle progress lib
+import { Progress } from 'circle-progress';
+
+// initialize
+const circle = document.querySelector( '.circle' );
+const p = new Progress( circle );
+
+// change progress
+p.progress( 20 );
+p.progress_animate( 60, 500 );
+```
