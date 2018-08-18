@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/node-sass/bin/node-sass --output dist sass/progress.scss && ./node_modules/rollup/bin/rollup -c rollup.config.js"
+    "build": "./node_modules/node-sass/bin/node-sass --source-map true --output-style compressed --output dist sass/progress.scss && ./node_modules/rollup/bin/rollup -c rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "node-sass": "^4.9.3",
     "rollup": "^0.64.1",
     "rollup-plugin-typescript2": "^0.16.1",
+    "rollup-plugin-uglify": "^4.0.0",
     "typescript": "^3.0.1"
   }
 }
