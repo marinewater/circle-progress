@@ -16,6 +16,10 @@ export class Progress {
 
     }
 
+    /**
+     * adds necessary child divs to root element
+     * @private
+     */
     private _addChildren() {
 
         this._element.innerHTML = '<div class="outer"><div class="inner"><div class="progress-text"></div></div></div>';
@@ -24,6 +28,10 @@ export class Progress {
 
     }
 
+    /**
+     * read the circle and progress color from the stylesheet
+     * @private
+     */
     private _getColors() {
 
         const color = document.createElement( 'div' );
@@ -38,6 +46,11 @@ export class Progress {
 
     }
 
+    /**
+     * move the progress color to the desired position
+     * @param {number} progress progress in percent
+     * @private
+     */
     private _progress( progress: number ) {
 
         if ( progress <= 50 ) {
@@ -53,19 +66,13 @@ export class Progress {
 
     }
 
-    public progress( progress: number ) {
-
-        this._progress( progress );
-        this._current_progress = progress;
-
-    }
-
-    public progress_animate( progress: number, time: number ) {
-
-        this._animate( progress, time, null );
-
-    }
-
+    /**
+     * animate progress over time
+     * @param {number} progress progress in percent
+     * @param {number} time animation time in milliseconds
+     * @param {number} start start time
+     * @private
+     */
     private _animate( progress, time, start ) {
 
         const _this = this;
@@ -85,6 +92,28 @@ export class Progress {
                 _this._animate( progress, time, start );
             }
         });
+
+    }
+
+    /**
+     * set current progress immediately
+     * @param {number} progress progress in percent
+     */
+    public progress( progress: number ) {
+
+        this._progress( progress );
+        this._current_progress = progress;
+
+    }
+
+    /**
+     * move to specified progress over time
+     * @param {number} progress progress in percent
+     * @param {number} time animation time
+     */
+    public progress_animate( progress: number, time: number ) {
+
+        this._animate( progress, time, null );
 
     }
 

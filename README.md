@@ -2,11 +2,6 @@
 
 [Demo](http://marinewater.github.io/circle-progress/)
 
-## Requirement
-* jQuery
-* jquery.transform2d.js
-* compass
-
 ## Usage:
 
 Add the required files to your head or body tag:
