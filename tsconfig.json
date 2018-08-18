@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es5",
+    "sourceMap": true,
+    "outDir": "dist",
+    "allowJs": false,
+    "alwaysStrict": true
+  },
+  "include": [
+    "ts/progress.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

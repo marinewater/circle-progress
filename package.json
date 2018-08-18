@@ -1,0 +1,26 @@
+{
+  "name": "circle-progress",
+  "version": "1.0.0",
+  "description": "[Demo](http://marinewater.github.io/circle-progress/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/node-sass/bin/node-sass --output dist sass/progress.scss && ./node_modules/rollup/bin/rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marinewater/circle-progress.git"
+  },
+  "author": "marinewater",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marinewater/circle-progress/issues"
+  },
+  "homepage": "https://github.com/marinewater/circle-progress#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "rollup": "^0.64.1",
+    "rollup-plugin-typescript2": "^0.16.1",
+    "typescript": "^3.0.1"
+  }
+}

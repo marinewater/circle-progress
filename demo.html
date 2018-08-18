@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle Progress Demo</title>
+    <link rel="stylesheet" href="dist/progress.css">
+    <style type="text/css">
+        .circle {
+            display: block;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<div class="circle"></div>
+
+<script src="dist/progress.js"></script>
+<script>
+    var circle = document.querySelector( '.circle' );
+
+    var p = new progress.Progress( circle );
+    p.progress( 20 );
+
+    window.setTimeout( () => p.progress_animate( 40, 500 ), 1000 );
+    window.setTimeout( () => p.progress_animate( 100, 1000 ), 2000 );
+</script>
+</body>
+</html>
