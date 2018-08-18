@@ -1,5 +1,5 @@
 {
-  "name": "circle-progress",
+  "name": "circle-progress-ts",
   "version": "2.0.0",
   "description": "[Demo](https://marinewater.github.io/circle-progress/demo.html)",
   "scripts": {
