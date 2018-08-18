@@ -3,35 +3,56 @@
 [Demo](http://marinewater.github.io/circle-progress/)
 
 ## Usage:
+* JS and CSS only
+* Scss
+* Typescript
 
-Add the required files to your head or body tag:
-```html
-<link href="stylesheets/screen.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.transform2d.js"></script>
-<script src="js/jquery.progress.js"></script>
+### JS and CSS only
+
+Include stylesheet
+```$html
+<link rel="stylesheet" href="dist/progress.css">
 ```
 
-Add a tag with the progress-circle class to your html:
+Include javascript
 ```html
-<div id="progress-circle" class="progress-circle">
-</div>
+<script src="dist/progress.min.js"></script>
 ```
 
-Include the scss file (compass needed) and include the mixin (`progress-circle($diameter, $width, $circle-bg, $bg, $progress-color, $progress-font-size, $transition-length)`)
-```scss
-@import "_progress";
+Add `div` to html
+```html
+<div class="circle"></div>
+```
 
-#progress-circle {
-	@include progress-circle(150px, 2px, #a1a1a1, #fff, #ff5521, 24px, 0.5s);
+Add styling to your own css
+```css
+.circle {
+    width: 150px;
+    height: 150px;
 }
 ```
 
-call .progress(percentage) on your jquery element
-
-```js
-$("#progress-circle").progress(0);
-$("#progress-circle").progress(30);
-$("#progress-circle").progress(75);
-$("#progress-circle").progress(100);
+Initialize progress circle in JS
+```javascript
+var circle = document.querySelector( '.circle' );
+var p = new progress.Progress( circle );
 ```
+
+Change progress
+```javascript
+// change current progress to 20%
+p.progress( 20 );
+```
+
+or animate progress change over time
+```javascript
+// changes from current progress to 60% over 500ms
+p.progress_animate( 60, 500 )
+```
+
+
+### Scss
+todo
+
+### Typescript
+todo
