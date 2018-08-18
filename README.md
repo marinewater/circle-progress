@@ -2,41 +2,161 @@
 
 [Demo](http://marinewater.github.io/circle-progress/)
 
-## Requirement
-* jQuery
-* jquery.transform2d.js
-* compass
+## Table of contents
+* Usage 
+    * JS and CSS
+    * SCSS
+    * Typescript
+* Styling
+    * CSS
+        * Background
+        * Circle color
+        * Circle progress color
+        * Circle width
+    * SCSS
+        * Background
+        * Circle color
+        * Circle progress color
+        * Circle width
 
 ## Usage:
+* JS and CSS
+* Scss
+* Typescript
 
-Add the required files to your head or body tag:
+### JS and CSS
+
+Include stylesheet
 ```html
-<link href="stylesheets/screen.css" rel="stylesheet" type="text/css" />
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.transform2d.js"></script>
-<script src="js/jquery.progress.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/progress.css">
 ```
 
-Add a tag with the progress-circle class to your html:
+Include javascript
 ```html
-<div id="progress-circle" class="progress-circle">
-</div>
+<script src="dist/progress.min.js"></script>
 ```
 
-Include the scss file (compass needed) and include the mixin (`progress-circle($diameter, $width, $circle-bg, $bg, $progress-color, $progress-font-size, $transition-length)`)
-```scss
-@import "_progress";
+Add `div` to html
+```html
+<div class="circle"></div>
+```
 
-#progress-circle {
-	@include progress-circle(150px, 2px, #a1a1a1, #fff, #ff5521, 24px, 0.5s);
+Add styling to your own css
+```css
+.circle {
+    width: 150px;
+    height: 150px;
 }
 ```
 
-call .progress(percentage) on your jquery element
+Initialize progress circle in JS
+```javascript
+var circle = document.querySelector( '.circle' );
+var p = new progress.Progress( circle );
+```
 
-```js
-$("#progress-circle").progress(0);
-$("#progress-circle").progress(30);
-$("#progress-circle").progress(75);
-$("#progress-circle").progress(100);
+Change progress
+```javascript
+// change current progress to 20%
+p.progress( 20 );
+```
+
+or animate progress change over time
+```javascript
+// changes from current progress to 60% over 500ms
+p.progress_animate( 60, 500 );
+```
+
+
+### Scss
+just import the scss file
+```scss
+@import "progress";
+```
+
+### Typescript
+```typescript
+// import circle progress lib
+import { Progress } from 'circle-progress';
+
+// initialize
+const circle = document.querySelector( '.circle' );
+const p = new Progress( circle );
+
+// change progress
+p.progress( 20 );
+p.progress_animate( 60, 500 );
+```
+
+## Styling
+* CSS
+* SCSS
+
+### CSS
+[Demo](http://marinewater.github.io/circle-progress/)
+
+* Background
+* Circle color
+* Circle progress color
+* Circle width
+
+#### Background
+Usually the same as parent background
+```css
+.circle .inner {
+    background: #373737;
+}
+```
+
+#### Circle color
+color of the circle of the remaining progress
+```css
+.circle .color {
+    color: #fff;
+}
+```
+
+#### Circle progress color
+color of the circle of the completed progress
+```css
+.circle .color {
+    background-color: #f00;
+}
+```
+
+#### Circle width
+```css
+.circle .inner {
+    width: 93%;
+    height: 93%;
+}
+```
+
+### SCSS
+* Background
+* Circle color
+* Circle progress color
+* Circle width
+
+#### Background
+Usually the same as parent background
+```scss
+$bg-color: #1c1d61;
+```
+
+#### Circle color
+color of the circle of the remaining progress
+```scss
+$circle-color: #6c6c6c;
+```
+
+#### Circle progress color
+color of the circle of the completed progress
+```scss
+$circle-progress-color: #ff9205;
+```
+
+#### Circle width
+```scss
+$circle-width: 7%;
 ```
