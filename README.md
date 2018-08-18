@@ -1,6 +1,6 @@
 # circle-progress
 
-[Demo](http://marinewater.github.io/circle-progress/)
+[Demo](https://marinewater.github.io/circle-progress/demo.html)
 
 ## Table of contents
 * Usage 
