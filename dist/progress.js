@@ -61,7 +61,6 @@ var progress = (function (exports) {
                     _this._animate(progress, time, start);
                 }
                 else if (timestamp - start > time) {
-                    console.log(progress);
                     _this.progress(progress);
                 }
                 else {
