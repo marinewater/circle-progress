@@ -7,7 +7,6 @@
     <style type="text/css">
         body {
             box-sizing: border-box;
-            margin: 0;
             width: 100%;
             height: 100%;
         }
@@ -16,29 +15,95 @@
             box-sizing: inherit;
         }
 
-        .circle {
-            width: 150px;
-            height: 150px;
-
+        .center {
+            width: 100%;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+
+        .circle {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+
+
+        #blue-circle .color {
+            color: #000000;
+            background-color: #6ceafc;
+        }
+
+        #blue-circle .inner {
+            width: 95%;
+            height: 95%;
+        }
+
+        #green-circle .color {
+            color: #ff5521;
+            background-color: #54ff4a;
+        }
+
+        #green-circle .inner {
+            width: 90%;
+            height: 90%;
         }
     </style>
 </head>
 <body>
-<div class="circle"></div>
+<div class="center">
+    <div class="circle" id="red-circle"></div>
+    <div class="circle" id="blue-circle"></div>
+    <div class="circle" id="green-circle"></div>
+</div>
 
 <script src="dist/progress.min.js"></script>
 <script>
-    var circle = document.querySelector( '.circle' );
+    var red_circle = document.querySelector( '#red-circle' );
+    var red_circle_progress = new progress.Progress( red_circle );
 
-    var p = new progress.Progress( circle );
-    p.progress( 20 );
+    function red_circle_loop() {
+        red_circle_progress.progress( 0 );
 
-    window.setTimeout( () => p.progress_animate( 40, 500 ), 1000 );
-    window.setTimeout( () => p.progress_animate( 100, 10000 ), 2000 );
+        window.setTimeout( () => red_circle_progress.progress_animate( 40, 500 ), 1000 );
+        window.setTimeout( () => red_circle_progress.progress_animate( 100, 5000 ), 2000 );
+
+        window.setTimeout( () => red_circle_loop(), 8000 );
+    }
+
+    red_circle_loop();
+
+
+    var blue_circle = document.querySelector( '#blue-circle' );
+    var blue_circle_progress = new progress.Progress( blue_circle );
+
+    function blue_circle_loop() {
+        blue_circle_progress.progress( 0 );
+
+        window.setTimeout( () => blue_circle_progress.progress_animate( 100, 6000 ), 1000 );
+
+        window.setTimeout( () => blue_circle_loop(), 8000 );
+    }
+
+    blue_circle_loop();
+
+
+    var green_circle = document.querySelector( '#green-circle' );
+    var green_circle_progress = new progress.Progress( green_circle );
+
+    function green_circle_loop() {
+        green_circle_progress.progress( 0 );
+
+        window.setTimeout( () => green_circle_progress.progress_animate( 50, 4000 ), 1000 );
+        window.setTimeout( () => green_circle_progress.progress_animate( 100, 1000 ), 6000 );
+
+        window.setTimeout( () => green_circle_loop(), 8000 );
+    }
+
+    green_circle_loop();
 </script>
 </body>
 </html>

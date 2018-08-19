@@ -4,6 +4,7 @@ $bg-color: #fff !default;
 $circle-width: 3% !default;
 
 .circle {
+  text-align: left;
 
   .color {
     background-color: $circle-progress-color;
