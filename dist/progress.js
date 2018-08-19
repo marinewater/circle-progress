@@ -13,7 +13,7 @@ var progress = (function (exports) {
          * @private
          */
         Progress.prototype._addChildren = function () {
-            this._element.innerHTML = '<div class="outer"><div class="inner"><div class="progress-text"></div></div></div>';
+            this._element.innerHTML = '<div class="outer"><div class="inner"><div class="progress-text">0%</div></div></div>';
             this._outer = this._element.querySelector('.outer');
             this._progress_text = this._element.querySelector('.progress-text');
         };
