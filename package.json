@@ -1,6 +1,6 @@
 {
   "name": "circle-progress-ts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "[Demo](https://marinewater.github.io/circle-progress/demo.html)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
