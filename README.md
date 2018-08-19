@@ -3,6 +3,7 @@
 [Demo](https://marinewater.github.io/circle-progress/demo.html)
 
 ## Table of contents
+* Installation
 * Usage 
     * JS and CSS
     * SCSS
@@ -19,6 +20,11 @@
         * Circle progress color
         * Circle width
 
+## Installation
+```sh
+npm install --save circle-progress-ts 
+```
+
 ## Usage:
 * JS and CSS
 * Scss
@@ -26,14 +32,14 @@
 
 ### JS and CSS
 
-Include stylesheet
+Include stylesheet, e.g.
 ```html
-<link rel="stylesheet" type="text/css" href="dist/progress.css">
+<link rel="stylesheet" type="text/css" href="node_modules/circle-progress-ts/dist/progress.css">
 ```
 
-Include javascript
+Include javascript, e.g.
 ```html
-<script src="dist/progress.min.js"></script>
+<script src="node_modules/circle-progress-ts/dist/progress.min.js"></script>
 ```
 
 Add `div` to html
@@ -71,13 +77,13 @@ p.progress_animate( 60, 500 );
 ### Scss
 just import the scss file
 ```scss
-@import "progress";
+@import "./node_modules/circle-progress-ts/sass/progress";
 ```
 
 ### Typescript
 ```typescript
 // import circle progress lib
-import { Progress } from 'circle-progress';
+import { Progress } from 'circle-progress-ts';
 
 // initialize
 const circle = document.querySelector( '.circle' );
