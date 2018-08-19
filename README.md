@@ -93,7 +93,8 @@ p.progress_animate( 60, 500 );
 * SCSS
 
 ### CSS
-[Demo](http://marinewater.github.io/circle-progress/)
+[Example](https://github.com/marinewater/circle-progress/blob/master/examples/styling-css.html),
+[Demo](https://marinewater.github.io/circle-progress/examples/styling-css.html)
 
 * Background
 * Circle color
@@ -133,6 +134,9 @@ color of the circle of the completed progress
 ```
 
 ### SCSS
+[Example](https://github.com/marinewater/circle-progress/blob/master/examples/styling-scss.scss),
+[Demo](https://marinewater.github.io/circle-progress/examples/styling-scss.html)
+
 * Background
 * Circle color
 * Circle progress color
