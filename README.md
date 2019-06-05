@@ -1,3 +1,5 @@
+[![npm (tag)](https://img.shields.io/npm/v/circle-progress-ts/latest.svg?style=popout-square)](https://www.npmjs.com/package/circle-progress-ts)
+
 # circle-progress
 
 [Demo](https://marinewater.github.io/circle-progress/demo.html)
